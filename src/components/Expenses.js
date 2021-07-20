@@ -1,4 +1,5 @@
 import ExpenseItem from './ExpenseItem';
+import './Expenses.css';
 
 export default function Expenses(props) {
   let itemList = [];
@@ -11,5 +12,5 @@ export default function Expenses(props) {
       ></ExpenseItem>
     );
   });
-  return <>{itemList}</>;
+  return <div className='expenses'>{itemList}</div>;
 }
