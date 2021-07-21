@@ -1,7 +1,8 @@
+import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 
-export default function Expenses(props) {
+const Expenses = (props) => {
   let itemList = [];
   props.items.forEach((expense) => {
     itemList.push(
@@ -12,5 +13,7 @@ export default function Expenses(props) {
       ></ExpenseItem>
     );
   });
-  return <div className='expenses'>{itemList}</div>;
-}
+  return <Card className='expenses'>{itemList}</Card>;
+};
+
+export default Expenses;
